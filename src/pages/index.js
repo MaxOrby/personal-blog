@@ -33,26 +33,38 @@ const IndexPage = () => (
   <Layout>
     <StaticQuery
       query={graphql`
-        {
-          allContentfulArticle {
-            edges {
-              node {
-                id
-                title
-                text {
-                  text
-                }
-                banner {
-                  file {
-                    url
+      {
+        allContentfulArticle {
+          edges {
+            node {
+              id
+              title
+              text {
+                content {
+                  content {
+                    value
                   }
                 }
-                publishedAt
+              }
+              publishedAt
+              banner {
+                file {
+                  url
+                }
               }
             }
           }
         }
-      `}
+      }
+    `}
+
+
+  
+
+
+
+
+
       render={({
         allContentfulArticle: {
           edges

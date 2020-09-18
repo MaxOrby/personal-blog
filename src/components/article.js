@@ -1,11 +1,31 @@
 import React from "react"
 
 const Article = ({
-  content: {
-    title,
-    text: {
-      text
-    },
+    content: {
+        title,
+
+        
+        text: {
+            content: [
+              {
+                content: [
+                  {
+                    value
+                  }
+                ]
+              }
+            ]
+          },
+
+
+
+
+
+
+
+
+
+
     banner: {
       file: {
         url
@@ -18,7 +38,7 @@ const Article = ({
     <h2>{title}</h2>
     <img src={url} alt={title}/>
     <p>
-      {text}
+      {value}
     </p>
     <h5>{publishedAt}</h5>
   </div>
